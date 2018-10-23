@@ -1,0 +1,99 @@
+Starting Dynare (version 4.4.3).
+Starting preprocessing of the model file ...
+Found 3 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+ - order 2
+Processing outputs ...done
+Preprocessing completed.
+Starting MATLAB/Octave computing.
+warning: delete: no such file: StochasticNeoclassicalGrowthModel_static.mex
+warning: called from
+    delete at line 47 column 9
+    erase_compiled_function at line 23 column 5
+    StochasticNeoclassicalGrowthModel at line 65 column 1
+    dynare at line 188 column 1
+warning: delete: no such file: StochasticNeoclassicalGrowthModel_dynamic.mex
+
+STEADY-STATE RESULTS:
+
+c 		 3.49562
+k 		 53.7547
+z 		 0
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+            0.95             0.95                0
+          0.9836           0.9836                0
+           1.033            1.033                0
+             Inf              Inf                0
+
+
+There are 2 eigenvalue(s) larger than 1 in modulus 
+for 2 forward-looking variable(s)
+
+The rank condition is verified.
+
+warning: implicit conversion from real matrix to real scalar
+
+MODEL SUMMARY
+
+  Number of variables:         3
+  Number of stochastic shocks: 1
+  Number of state variables:   2
+  Number of jumpers:           2
+  Number of static variables:  0
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+
+Variables    epsilon 
+epsilon      0.000025
+
+POLICY AND TRANSITION FUNCTIONS
+                                       c               k               z
+Constant                    3.495492       53.754813               0
+(correction)               -0.000124        0.000124               0
+k(-1)                       0.032691        0.983569               0
+z(-1)                       1.040260        2.791244        0.950000
+epsilon                     1.095010        2.938152        1.000000
+k(-1),k(-1)                -0.000126       -0.000032               0
+z(-1),k(-1)                 0.003650        0.021297               0
+z(-1),z(-1)                 0.310895        1.509069               0
+epsilon,epsilon             0.344482        1.672099               0
+k(-1),epsilon               0.003842        0.022418               0
+z(-1),epsilon               0.654516        3.176988               0
+
+
+MOMENTS OF SIMULATED VARIABLES
+
+VARIABLE      MEAN    STD. DEV.   VARIANCE   SKEWNESS   KURTOSIS 
+c            3.497126   0.056242   0.003163  -0.754024   1.525329
+k           53.818216   1.390231   1.932743  -0.789877   1.508520
+z           -0.000344   0.016661   0.000278  -0.156193   0.492872
+
+
+CORRELATION OF SIMULATED VARIABLES
+
+VARIABLE      c       k       z   
+c           1.0000  0.9659  0.6918
+k           0.9659  1.0000  0.4814
+z           0.6918  0.4814  1.0000
+
+
+AUTOCORRELATION OF SIMULATED VARIABLES
+
+VARIABLE      1       2       3       4       5   
+c           0.9944  0.9887  0.9825  0.9752  0.9676
+k           0.9990  0.9976  0.9953  0.9922  0.9884
+z           0.9507  0.9051  0.8622  0.8152  0.7723
+warning: print.m: epstool binary is not available.
+Some output formats are not available.
+warning: print.m: fig2dev binary is not available.
+Some output formats are not available.
+Total computing time : 0h00m03s
+Note: warning(s) encountered in MATLAB/Octave code
