@@ -4,7 +4,8 @@ These codes depend on both:
 - VFI Toolkit: https://github.com/vfitoolkit/VFIToolkit-matlab
 - JMMV2014 Chebyshev-Smolyak implementation: https://github.com/BFI-MFM/smolyak-anisotropic
 
-WhatGoesWrong.m produces the tables and results contained in the paper.
+WhatGoesWrong.m allows the user to look at the output in detail for a given order of Chebyshev polynomial and experiment for themselves with looking at generating invidual figures and results of the kind reported in the paper.
+WhatGoesWrong_Table.m is, roughly speaking, a loop over this that produces the tables and results contained in the paper.
 
 StochasticNeoClassicalGrowthModel_SmolyakChebyshev.m uses fitted Value Function Iteration with Smolyak-Chebyshev polynomials to solve the Stochastic NeoClassical Growth model. Warning: as described in the paper this method fails to converge to the correct solution (converges to incorrect solutions) for 'practical' orders of Chebyshev polynomial.
 

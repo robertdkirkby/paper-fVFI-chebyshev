@@ -1,4 +1,4 @@
-function [L2_V,LInf_V, L2_Policy, LInf_Policy]=WhatGoesWrong_Table_fn(vector_mus_dimensions)
+function [L2_V,LInf_V, L2_Policy, LInf_Policy]=WhatGoesWrong_Table_fn(vector_mus_dimensions, use_smolyak)
 % Pretty much same as 'WhatGoesWrong.m', but now takes
 % vector_mus_dimensions as input, and just returns some measures used for a
 % table.
@@ -10,7 +10,11 @@ function [L2_V,LInf_V, L2_Policy, LInf_Policy]=WhatGoesWrong_Table_fn(vector_mus
 % vector_mus_dimensions = [2,2]; % Introduce the level of approximation in every dimension from 1 to 10; see Section 4 of JMMV (2014)
 
 d=length(vector_mus_dimensions); % Number of dimensions
-mu_max  = max(vector_mus_dimensions); % Compute the maximum level of approximation across all dimensions
+if use_smolyak==0
+    mu_max  = max(vector_mus_dimensions); % Compute the maximum level of approximation across all dimensions
+elseif use_smolyak==1
+    mu_max = ceil(sqrt(max(max(vector_mus_dimensions))));
+end
 
 Smolyak_elem_iso = Smolyak_Elem_Isotrop(d,mu_max);
     % Construct the matrix of indices of multidimesional Smolyak elements (grid points and polynomial basis functions) that satisfy the usual
