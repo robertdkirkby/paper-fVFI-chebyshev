@@ -2,7 +2,7 @@
 Codes for "Fitted Value Function Iteration with Smolyak-Chebyshev Polynomials: Poor Performance in Practice"
 These codes depend on both:
 - VFI Toolkit: https://github.com/vfitoolkit/VFIToolkit-matlab
-- JMMV2014 Chebyshev-Smolyak implementation: https://github.com/BFI-MFM/smolyak-anisotropic
+- JMMV2014 Chebyshev-Smolyak implementation: https://au.mathworks.com/matlabcentral/fileexchange/50963-smolyak-anisotropic-grid
 
 WhatGoesWrong.m allows the user to look at the output in detail for a given order of Chebyshev polynomial and experiment for themselves with looking at generating invidual figures and results of the kind reported in the paper.
 WhatGoesWrong_Table.m is, roughly speaking, a loop over this that produces the tables and results contained in the paper.
